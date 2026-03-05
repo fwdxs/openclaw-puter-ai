@@ -1,0 +1,13 @@
+{
+  "name": "puter-ai",
+  "version": "2.0.0",
+  "description": "Adds AI commands powered by Puter",
+  "commands": [
+    "/ai chat",
+    "/ai summarize",
+    "/ai image",
+    "/ai code",
+    "/ai analyze",
+    "/ai search"
+  ]
+}
