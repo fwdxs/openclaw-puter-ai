@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 console.log("puterClient.js loaded");
 
 const fs = require("fs");
@@ -140,11 +141,21 @@ async function chatWithTools(messages, tools) {
     model,
     tools,
     stream: false
+=======
+async function chat(messages, streamCallback) {
+
+  const response = await puter.ai.chat(messages, {
+    stream: true,
+    onToken: token => {
+      if (streamCallback) streamCallback(token);
+    }
+>>>>>>> b93a100c415d6d8212a96095372e5c78ba44092f
   });
 
   return response;
 }
 
+<<<<<<< HEAD
 function saveDataUrlToFile(src) {
   if (typeof src !== "string" || !src.startsWith("data:image")) {
     return null;
@@ -246,14 +257,22 @@ async function image(prompt) {
   console.log("[Puter Image] Saved file:", filepath);
 
   return `Image generated:\n${filepath}`;
+=======
+async function image(prompt) {
+  return await puter.ai.image(prompt);
+>>>>>>> b93a100c415d6d8212a96095372e5c78ba44092f
 }
 
 module.exports = {
   chat,
+<<<<<<< HEAD
   chatWithTools,
   image,
   getPuter,
   pickChatModel,
   extractText,
   MODELS
+=======
+  image
+>>>>>>> b93a100c415d6d8212a96095372e5c78ba44092f
 };

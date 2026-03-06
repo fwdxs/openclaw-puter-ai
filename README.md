@@ -1,5 +1,6 @@
 # OpenClaw Puter AI Plugin
 
+<<<<<<< HEAD
 ![npm](https://img.shields.io/npm/v/@fw_dxs/openclaw-puter-ai)
 ![license](https://img.shields.io/npm/l/@fw_dxs/openclaw-puter-ai)
 
@@ -192,3 +193,21 @@ Planned features include:
 - code execution tools
 - multi-image generation
 - improved OpenClaw UI integration
+=======
+Adds AI capabilities to OpenClaw using Puter.
+
+Commands:
+
+/ai chat
+/ai summarize
+/ai image
+/ai code
+/ai analyze
+/ai search
+
+Install:
+
+1. Place folder in /plugins
+2. Run npm install
+3. Restart OpenClaw
+>>>>>>> b93a100c415d6d8212a96095372e5c78ba44092f

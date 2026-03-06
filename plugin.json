@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "id": "openclaw-puter-ai",
   "name": "Puter AI Assistant",
   "version": "2.1.0",
@@ -23,5 +24,17 @@
   "permissions": [
     "network",
     "filesystem"
+=======
+  "name": "puter-ai",
+  "version": "2.0.0",
+  "description": "Adds AI commands powered by Puter",
+  "commands": [
+    "/ai chat",
+    "/ai summarize",
+    "/ai image",
+    "/ai code",
+    "/ai analyze",
+    "/ai search"
+>>>>>>> b93a100c415d6d8212a96095372e5c78ba44092f
   ]
 }
