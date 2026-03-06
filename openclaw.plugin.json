@@ -1,0 +1,12 @@
+{
+  "id": "openclaw-puter-ai",
+  "name": "Puter AI Assistant",
+  "version": "2.1.0",
+  "description": "Advanced AI assistant for OpenClaw powered by Puter with GPT-5.3 routing and autonomous tools.",
+  "main": "./index.js",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}

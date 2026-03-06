@@ -1,0 +1,20 @@
+# runtime data
+memory.json
+generated/
+
+# puter auth
+.puter-token.json
+puter-token.json
+
+# environment variables
+.env
+
+# logs
+*.log
+
+# node
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db

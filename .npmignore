@@ -1,0 +1,15 @@
+# runtime data
+.puter-token.json
+memory.json
+
+# generated images
+generated/
+
+# development files
+node_modules/
+.git/
+.gitignore
+.vscode/
+
+# logs
+*.log
