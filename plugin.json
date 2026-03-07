@@ -1,11 +1,15 @@
 {
-<<<<<<< HEAD
   "id": "openclaw-puter-ai",
   "name": "Puter AI Assistant",
-  "version": "2.1.0",
+  "version": "2.1.3",
   "description": "Advanced AI assistant for OpenClaw powered by Puter with GPT-5.3 dynamic routing and autonomous tools.",
   "author": "fw_dxs",
   "main": "./index.js",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
   "commands": [
     {
       "name": "ai",
@@ -24,17 +28,5 @@
   "permissions": [
     "network",
     "filesystem"
-=======
-  "name": "puter-ai",
-  "version": "2.0.0",
-  "description": "Adds AI commands powered by Puter",
-  "commands": [
-    "/ai chat",
-    "/ai summarize",
-    "/ai image",
-    "/ai code",
-    "/ai analyze",
-    "/ai search"
->>>>>>> b93a100c415d6d8212a96095372e5c78ba44092f
   ]
 }

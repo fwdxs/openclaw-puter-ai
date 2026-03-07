@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const ai = require("./puterClient");
 const webSearch = require("./tools/webSearch");
 const codeGen = require("./tools/codeGen");
@@ -166,7 +165,6 @@ async function runAgent(prompt) {
       return text || "No response.";
     }
 
-    // shortcut: one image tool call should return directly
     if (
       toolCalls.length === 1 &&
       toolCalls[0]?.function?.name === "generate_image"
@@ -191,28 +189,6 @@ async function runAgent(prompt) {
   }
 
   return "Agent stopped after too many tool-calling rounds.";
-=======
-const webSearch = require("./tools/webSearch");
-const codeGen = require("./tools/codeGen");
-
-async function runAgent(prompt) {
-
-  const systemPrompt = `
-You are an AI agent with tools:
-
-webSearch(query) → search the internet
-codeGen(prompt) → generate code
-
-Use them when helpful.
-`;
-
-  const response = await puter.ai.chat([
-    { role: "system", content: systemPrompt },
-    { role: "user", content: prompt }
-  ]);
-
-  return response;
->>>>>>> b93a100c415d6d8212a96095372e5c78ba44092f
 }
 
 module.exports = { runAgent };

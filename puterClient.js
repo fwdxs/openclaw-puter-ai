@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 console.log("puterClient.js loaded");
 
 const fs = require("fs");
@@ -141,48 +140,9 @@ async function chatWithTools(messages, tools) {
     model,
     tools,
     stream: false
-=======
-async function chat(messages, streamCallback) {
-
-  const response = await puter.ai.chat(messages, {
-    stream: true,
-    onToken: token => {
-      if (streamCallback) streamCallback(token);
-    }
->>>>>>> b93a100c415d6d8212a96095372e5c78ba44092f
   });
 
   return response;
-}
-
-<<<<<<< HEAD
-function saveDataUrlToFile(src) {
-  if (typeof src !== "string" || !src.startsWith("data:image")) {
-    return null;
-  }
-
-  ensureDir(OUTPUT_DIR);
-
-  const match = src.match(/^data:(image\/[a-zA-Z0-9.+-]+);base64,(.+)$/);
-  if (!match) {
-    throw new Error("Unsupported image data format.");
-  }
-
-  const mimeType = match[1];
-  const base64 = match[2];
-
-  let ext = "png";
-  if (mimeType.includes("webp")) ext = "webp";
-  else if (mimeType.includes("jpeg")) ext = "jpg";
-  else if (mimeType.includes("jpg")) ext = "jpg";
-  else if (mimeType.includes("png")) ext = "png";
-
-  const buffer = Buffer.from(base64, "base64");
-  const filename = `ai-image-${Date.now()}.${ext}`;
-  const filepath = path.join(OUTPUT_DIR, filename);
-
-  fs.writeFileSync(filepath, buffer);
-  return filepath;
 }
 
 async function image(prompt) {
@@ -225,14 +185,12 @@ async function image(prompt) {
 
   console.log("[Puter Image] src preview:", src.slice(0, 80));
 
-  // normal URL
   if (!src.startsWith("data:")) {
     return `Image generated:\n${src}`;
   }
 
   ensureDir(OUTPUT_DIR);
 
-  // accept data:image/... OR data:undefined;base64,...
   const match = src.match(/^data:([^;,]*)?;base64,(.+)$/);
 
   if (!match) {
@@ -257,22 +215,14 @@ async function image(prompt) {
   console.log("[Puter Image] Saved file:", filepath);
 
   return `Image generated:\n${filepath}`;
-=======
-async function image(prompt) {
-  return await puter.ai.image(prompt);
->>>>>>> b93a100c415d6d8212a96095372e5c78ba44092f
 }
 
 module.exports = {
   chat,
-<<<<<<< HEAD
   chatWithTools,
   image,
   getPuter,
   pickChatModel,
   extractText,
   MODELS
-=======
-  image
->>>>>>> b93a100c415d6d8212a96095372e5c78ba44092f
 };
